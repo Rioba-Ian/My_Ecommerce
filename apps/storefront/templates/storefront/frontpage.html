@@ -1,0 +1,31 @@
+{% extends 'storefront/base.html' %}
+
+{% block title %}Welcome | {% endblock %}
+
+{% block content %}
+
+    <div class="columns is-multiline mb-6" >
+        <div class="column is-12 has-text-centered mt-6 mb-6" >
+            <h2 class="is-size-3">Newest Products</h2>
+        </div>
+
+        <aside class="menu">
+            <ul class="menu-list">
+                <a href="/?category={{category}}" class="is-active">All Products</a>
+                <li>
+                    <a class="is-active">Categories</a>
+                    <ul>
+                    {% for category in categories %}
+                  <li><a href="/?category={{category.id}}">{{category.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            </ul>
+          </aside>
+
+        {% for product in newest_products %}
+        {% include 'product/parts/list_item.html' %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
