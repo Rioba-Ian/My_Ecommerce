@@ -3,32 +3,6 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
-
-
-.field:not(:last-child){
-margin-bottom: 0px;
-}
-.columns{
-margin: 20px !important;
-}
-.custom-color{
-background: linear-gradient(25deg,  #564ca9 70%, #2c2c54 60%);
-padding: 35px;
-border-radius: 4px;
-}
-.label{
-    color: #fff;
-}
-.submit{
-background-color: #ddd;
-color: black;
-border:0px;
-}
-.submit:hover{
-background-color: #303952;
-color: #fff;
-}
-
 /**
 * Nav
 */
@@ -90,34 +64,25 @@ aside {
     /* background: linear-gradient(to bottom, #564ca9 0%,#564ca9 100%); */
 }
 
-.hero-body{
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 0;
-    padding: 1rem 1.5rem;
-    justify-content: center;
+/**
+* Notification toast
+*/
+
+@keyframes show-toast {
+    0%   {bottom: -100%;}
+    20%  {bottom: 50px;}
+    80%  {bottom: 50px;}
+    100% {bottom: -100%;}
 }
 
-.button.is-primary{
-    background-color: #564ca9;
+.notification.is-toast {
+    position: fixed;
+    bottom: 100%;
+    right: 20px;
+    animation-name: show-toast;
+    animation-duration: 4s;
 }
 
-.control a{
-    color: #ddd;
-    margin-left: 5px;
-    /* margin-right: 10px; */
-    background-color: #444;
+.hero.is-info.is-bold{
+   background-image: linear-gradient(141deg,#121213 20%,#313538 71%,#4389e5 100%);
 }
-
-.image.is-4by3 img{
-    height: 250px;
-    width: 300px;
-}
-
-/* .control {
-    color: #ddd;
-    margin-left: 5px;
-    margin-right: 10px;
-    background-color: #444;
-} */
