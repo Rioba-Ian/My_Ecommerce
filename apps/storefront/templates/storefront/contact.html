@@ -1,9 +1,54 @@
 {% extends 'storefront/base.html' %}
 
-{% block title %}Welcome | {% endblock %}
+{% block title %}Contact Us | {% endblock %}
 
 {% block content %}
 
-    <h2 class="title">This is our contact page</h2>
+
+
+<section class="hero is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="columns is-12 is-variable ">
+                <div class="column is-two-thirds has-text-left">
+                    <h1 class="title is-1">Contact Us</h1>
+                    <p class="is-size-4">Reach out to us if you have any queries regarding products or vendors.</p>
+                    <div class="social-media">
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="google"><i class="fab fa-google"></i></a>
+                        <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <form method="post" action=".">
+                    {% csrf_token %}                 
+                <div class="column has-text-left">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input is-medium" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input is-medium" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea is-medium"></textarea>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <input type="submit" value="Submit" class="button is-block is-dark is-fullwidth is-medium">
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}

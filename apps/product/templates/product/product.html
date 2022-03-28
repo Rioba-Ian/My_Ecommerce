@@ -1,18 +1,18 @@
 {% extends 'storefront/base.html' %}
-
+{% load static %}
 {% block title %}{{ product.title }} | {% endblock %}
 
 {% block content %}
 
     {% if product.image %}
-    <figure class="image is-4by3 mb-6">
+    <figure class="image is-16by9 mb-5">
         <img src="{{product.image.url}}" alt="">
     </figure>
     {% endif %}
 
     <h1 class="title" >{{product.title}}, kshs {{product.price}}</h1>
 
-    <p class="mb-6" > <span class="tag is-dark" >{{product.vendor.name}}</span> </p>
+    <p class="mb-6" > <span class="tag is-dark" >Vendor: {{product.vendor.name}}</span> </p>
 
     <p>{{product.description}}</p>
 
@@ -21,6 +21,7 @@
     {% if messages %}
         {% for message in messages %}
         <div class="notification is-success is-toast">
+            {{message}}
             {% endfor %}
         </div>
     {% endif %}

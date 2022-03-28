@@ -13,12 +13,18 @@ body {
     text-transform: uppercase;
 }
 
-.navbar.is-dark {
-    background-color: #564ca9;
+.navbar .is-dark {
+    background: #444;
+}
+
+.has-bg-img {
+  background: url("./images/pexels-hesham-photography-8796361.jpg");
+  background-position: 50% 50%;
+  background-size:cover;
 }
 
 /**
-* Footer 
+* Footer
 */
 
 footer {
@@ -36,6 +42,10 @@ footer {
     color: #444;
 }
 
+h1{
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 /**
 * Bulma overrides
 */
@@ -52,16 +62,6 @@ footer {
 
 .product-list-item .box .price{
     color: black;
-}
-
-/* aside */
-aside {
-    position: relative;
-    top:0;
-    left:10px;
-    right: 80px;
-    bottom: 80%;
-    /* background: linear-gradient(to bottom, #564ca9 0%,#564ca9 100%); */
 }
 
 /**
@@ -81,8 +81,4 @@ aside {
     right: 20px;
     animation-name: show-toast;
     animation-duration: 4s;
-}
-
-.hero.is-info.is-bold{
-   background-image: linear-gradient(141deg,#121213 20%,#313538 71%,#4389e5 100%);
 }
